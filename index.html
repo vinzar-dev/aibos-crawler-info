@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>AIBusinessOS-research-bot</title>
+<style>
+  :root { --fg: #1d1f23; --muted: #5b6270; --bg: #ffffff; --line: #e3e6eb; --accent: #1f5fbf; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #e8eaee; --muted: #a3aab6; --bg: #14161a; --line: #2b2f36; --accent: #7fb0ff; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 32px 0 8px; border-top: 1px solid var(--line); padding-top: 20px; }
+  code, pre { font-family: ui-monospace, Consolas, monospace; font-size: .92rem; }
+  pre { background: color-mix(in srgb, var(--fg) 6%, transparent); padding: 12px; overflow-x: auto; border-radius: 6px; }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); }
+  ul { padding-left: 20px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>AIBusinessOS-research-bot</h1>
+  <p class="muted">Pagina informativa del programma automatico di lettura dati · Information page for the automated data reader</p>
+
+  <section lang="it">
+    <h2>Che cos'è</h2>
+    <p>AIBusinessOS-research-bot è un programma automatico che legge <strong>dati pubblici</strong> per ricerche di mercato su prodotti digitali per aziende. Usa soltanto interfacce (API) pubbliche e gratuite pensate per l'accesso automatico. Attualmente usa il servizio <em>GDELT DOC 2.0 API</em>.</p>
+    <h2>Come si comporta</h2>
+    <ul>
+      <li>Si identifica sempre con lo User-Agent <code>AIBusinessOS-research-bot/0.1</code> seguito dall'indirizzo di questa pagina.</li>
+      <li>Rispetta <code>robots.txt</code>: se il file non è raggiungibile per un errore del server, non accede.</li>
+      <li>Fa poche richieste, distanziate nel tempo, e rispetta il <code>Crawl-delay</code>. Si ferma alla prima risposta 429 o 403.</li>
+      <li>Non segue redirect, non usa proxy di terzi, non aggira CAPTCHA, blocchi o limiti di accesso.</li>
+      <li>Non effettua login, non compila moduli, non acquista nulla e non esegue pagamenti.</li>
+      <li>Non raccoglie dati personali. Conserva soltanto metadati e collegamenti, non copie dei contenuti.</li>
+    </ul>
+    <h2>Come bloccarlo</h2>
+    <p>Aggiungete al vostro <code>robots.txt</code>:</p>
+    <pre>User-agent: AIBusinessOS-research-bot
+Disallow: /</pre>
+    <h2>Contatti</h2>
+    <p>Per segnalazioni o richieste aprite una <em>issue</em> nel repository pubblico che ospita questa pagina. Non viene pubblicato alcun indirizzo email.</p>
+  </section>
+
+  <section lang="en">
+    <h2>What it is</h2>
+    <p>AIBusinessOS-research-bot is an automated program that reads <strong>public data</strong> for market research on digital B2B products. It only uses free public APIs intended for automated access. It currently uses the <em>GDELT DOC 2.0 API</em>.</p>
+    <h2>How it behaves</h2>
+    <ul>
+      <li>It always identifies itself with the User-Agent <code>AIBusinessOS-research-bot/0.1</code> followed by the address of this page.</li>
+      <li>It honours <code>robots.txt</code>. If the file cannot be fetched because of a server error, it does not access the site.</li>
+      <li>It sends few, spaced-out requests and honours <code>Crawl-delay</code>. It stops at the first 429 or 403 response.</li>
+      <li>It does not follow redirects, does not use third-party proxies, and never circumvents CAPTCHAs, blocks or access limits.</li>
+      <li>It does not log in, submit forms, buy anything or make payments.</li>
+      <li>It does not collect personal data. Only metadata and links are kept, not copies of the content.</li>
+    </ul>
+    <h2>How to block it</h2>
+    <p>Add this to your <code>robots.txt</code>:</p>
+    <pre>User-agent: AIBusinessOS-research-bot
+Disallow: /</pre>
+    <h2>Contact</h2>
+    <p>For reports or requests, please open an <em>issue</em> in the public repository that hosts this page. No email address is published.</p>
+  </section>
+</main>
+</body>
+</html>
